@@ -1,0 +1,55 @@
+{
+  "": {
+    "dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/DroidMacCore.d",
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/DroidMacCore.o",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/primary.swiftdeps"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCore/ADBClient.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/ADBClient.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/ADBClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/ADBClient.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/ADBClient.dia"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCore/EmulatorEngine.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/EmulatorEngine.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/EmulatorEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/EmulatorEngine.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/EmulatorEngine.dia"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCore/MacAppBundleBuilder.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/MacAppBundleBuilder.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/MacAppBundleBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/MacAppBundleBuilder.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/MacAppBundleBuilder.dia"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCore/Models.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/Models.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/Models.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/Models.dia"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCore/PathsAndEnvironment.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/PathsAndEnvironment.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/PathsAndEnvironment~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/PathsAndEnvironment.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/PathsAndEnvironment.dia"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCore/ProcessRunner.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/ProcessRunner.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/ProcessRunner~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/ProcessRunner.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/ProcessRunner.dia"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCore/RuntimeManager.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/RuntimeManager.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/RuntimeManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/RuntimeManager.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/RuntimeManager.dia"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCore/WindowLauncher.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/WindowLauncher.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/WindowLauncher~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/WindowLauncher.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCore.build/WindowLauncher.dia"
+  }
+}

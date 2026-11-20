@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCLI.build/DroidMacCLI.d",
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCLI.build/DroidMacCLI.o",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCLI.build/primary.swiftdeps"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Sources/DroidMacCLI/main.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCLI.build/main.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCLI.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCLI.build/main.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCLI.build/main.dia"
+  }
+}

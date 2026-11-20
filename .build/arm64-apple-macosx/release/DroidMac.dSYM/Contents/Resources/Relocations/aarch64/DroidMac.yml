@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMac'
+relocations:     []
+...

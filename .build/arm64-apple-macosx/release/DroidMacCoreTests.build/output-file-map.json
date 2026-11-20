@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCoreTests.build/DroidMacCoreTests.d",
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCoreTests.build/DroidMacCoreTests.o",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCoreTests.build/primary.swiftdeps"
+  },
+  "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/Tests/DroidMacCoreTests/DroidMacCoreTests.swift": {
+    "object": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCoreTests.build/DroidMacCoreTests.swift.o",
+    "swiftmodule": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCoreTests.build/DroidMacCoreTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCoreTests.build/DroidMacCoreTests.swiftdeps",
+    "diagnostics": "/Users/sinarahmannejad/Work/Projects/IOS/macOS/android/.build/arm64-apple-macosx/release/DroidMacCoreTests.build/DroidMacCoreTests.dia"
+  }
+}
