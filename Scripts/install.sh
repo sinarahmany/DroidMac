@@ -4,7 +4,7 @@ set -euo pipefail
 # DroidMac Installer for macOS (Apple Silicon)
 # Repository: https://github.com/sinarahmany/DroidMac
 
-VERSION="1.0.0"
+VERSION="0.1.0-alpha"
 REPO="sinarahmany/DroidMac"
 DOWNLOAD_URL="https://github.com/${REPO}/releases/download/v${VERSION}/DroidMac-v${VERSION}-arm64.dmg"
 INSTALL_DIR="/Applications"

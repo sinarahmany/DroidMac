@@ -25,7 +25,7 @@ jobs:
         run: ./Scripts/build_app.sh
 
       - name: Package Release (.dmg & .zip)
-        run: ./Scripts/package_release.sh 1.0.0
+        run: ./Scripts/package_release.sh 0.1.0-alpha
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4

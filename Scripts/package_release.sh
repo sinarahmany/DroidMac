@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-VERSION="1.0.0"
+VERSION="${1:-0.1.0-alpha}"
 ARCH="arm64"
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 DIST_DIR="$ROOT_DIR/dist"

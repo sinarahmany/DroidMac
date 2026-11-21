@@ -9,22 +9,26 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/sinarahmany/DroidMac/releases/tag/v1.0.0"><img src="https://img.shields.io/badge/Release-v1.0.0-007AFF?style=flat-square&logo=apple" alt="Release v1.0.0"></a>
+  <a href="https://github.com/sinarahmany/DroidMac/releases/tag/v0.1.0-alpha"><img src="https://img.shields.io/badge/Release-v0.1.0--alpha-FF9500?style=flat-square&logo=apple" alt="Release v0.1.0-alpha"></a>
+  <img src="https://img.shields.io/badge/Status-Public%20Alpha-orange?style=flat-square" alt="Status">
   <img src="https://img.shields.io/badge/Platform-macOS%20Apple%20Silicon%20(M1%2FM2%2FM3%2FM4)-34C759?style=flat-square&logo=apple" alt="Platform">
   <img src="https://img.shields.io/badge/Guest%20OS-Android%2015%20(ARM64)-3DDC84?style=flat-square&logo=android" alt="Android 15">
-  <img src="https://img.shields.io/badge/Virtualization-Hypervisor.framework-FF9500?style=flat-square" alt="Hypervisor">
+  <img src="https://img.shields.io/badge/Virtualization-Hypervisor.framework-007AFF?style=flat-square" alt="Hypervisor">
   <img src="https://img.shields.io/badge/Graphics-Metal%20%2F%20gfxstream%20(60fps)-5856D6?style=flat-square" alt="Metal">
   <a href="#license"><img src="https://img.shields.io/badge/License-MIT-gray?style=flat-square" alt="License"></a>
 </p>
 
 ---
 
-## Downloads (v1.0.0)
+## Downloads (v0.1.0-alpha)
+
+> [!IMPORTANT]
+> **Alpha Preview:** DroidMac is currently in active alpha testing. Feedback and issue reports are welcome!
 
 | Package | Architecture | Size | Checksum (SHA-256) |
 | :--- | :--- | :--- | :--- |
-| **[DroidMac-v1.0.0-arm64.dmg](https://github.com/sinarahmany/DroidMac/releases/download/v1.0.0/DroidMac-v1.0.0-arm64.dmg)** | Apple Silicon (`arm64`) | `1.4 MB` | `0574f13f4188d0052c80f8c7766103fd2ba8dda203b13ad79d627fb2735bce62` |
-| **[DroidMac-v1.0.0-arm64.zip](https://github.com/sinarahmany/DroidMac/releases/download/v1.0.0/DroidMac-v1.0.0-arm64.zip)** | Apple Silicon (`arm64`) | `1.0 MB` | `03494e7a4df339dc7fafb27fa332449010d1cc9c7b52e35e99cba19fc4690d81` |
+| **[DroidMac-v0.1.0-alpha-arm64.dmg](https://github.com/sinarahmany/DroidMac/releases/download/v0.1.0-alpha/DroidMac-v0.1.0-alpha-arm64.dmg)** | Apple Silicon (`arm64`) | `1.4 MB` | `d037d9767c6b0e83b55897c9ac414085923db022e641731bfd69579e55c747d0` |
+| **[DroidMac-v0.1.0-alpha-arm64.zip](https://github.com/sinarahmany/DroidMac/releases/download/v0.1.0-alpha/DroidMac-v0.1.0-alpha-arm64.zip)** | Apple Silicon (`arm64`) | `1.0 MB` | `bea285ca6151a5798fdec43df378b6d90e968cd11a78bb8a609703c0a2cdad42` |
 
 > [!NOTE]
 > All releases require macOS 13.0 or higher running on Apple Silicon (M1/M2/M3/M4, Pro, Max, or Ultra).
@@ -164,7 +168,7 @@ Requirements:
 
 ### Packaging Distribution (.dmg & .zip)
 ```bash
-./Scripts/package_release.sh 1.0.0
+./Scripts/package_release.sh 0.1.0-alpha
 ```
 
 ### Running Test Suite
