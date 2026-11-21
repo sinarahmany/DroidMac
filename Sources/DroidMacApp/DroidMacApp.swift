@@ -7,6 +7,17 @@ final class DroidMacAppDelegate: NSObject, NSApplicationDelegate {
     weak var appState: AppState?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        let args = CommandLine.arguments
+        if let idx = args.firstIndex(of: "--capture-screenshots"), idx + 1 < args.count {
+            let outDir = URL(fileURLWithPath: args[idx + 1])
+            Task { @MainActor in
+                let state = self.appState ?? AppState()
+                await state.bootstrapOnLaunch()
+                await ScreenshotGenerator.captureAll(state: state, to: outDir)
+                NSApp.terminate(nil)
+            }
+            return
+        }
         NSApp.setActivationPolicy(.regular)
         NSApp.activate(ignoringOtherApps: true)
     }

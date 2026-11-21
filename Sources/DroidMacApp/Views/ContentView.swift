@@ -21,7 +21,12 @@ enum SidebarTab: String, CaseIterable, Identifiable {
 
 struct ContentView: View {
     @Bindable var state: AppState
-    @State private var selectedTab: SidebarTab = .library
+    @State var selectedTab: SidebarTab
+
+    init(state: AppState, selectedTab: SidebarTab = .library) {
+        self.state = state
+        self._selectedTab = State(initialValue: selectedTab)
+    }
 
     var body: some View {
         NavigationSplitView {

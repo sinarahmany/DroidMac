@@ -73,10 +73,19 @@ public enum LaunchProfile: String, Codable, CaseIterable, Sendable, Identifiable
 
     public var virtualDisplaySpec: String {
         switch self {
-        case .adaptiveApp: return "900x1200/280"
+        case .adaptiveApp: return "1080x1560/320"
         case .gameLandscape: return "1920x1080/320"
-        case .phonePortrait: return "720x1480/320"
-        case .tabletLandscape: return "1440x900/260"
+        case .phonePortrait: return "1080x2340/420"
+        case .tabletLandscape: return "1920x1200/300"
+        }
+    }
+
+    public var flexVirtualDisplaySpec: String {
+        switch self {
+        case .adaptiveApp: return "540x780/160"
+        case .gameLandscape: return "1920x1080/320"
+        case .phonePortrait: return "412x820/160"
+        case .tabletLandscape: return "960x600/160"
         }
     }
 
@@ -92,18 +101,18 @@ public enum LaunchProfile: String, Codable, CaseIterable, Sendable, Identifiable
     public var defaultWindowWidth: Int {
         switch self {
         case .adaptiveApp: return 540
-        case .gameLandscape: return 1280
-        case .phonePortrait: return 430
-        case .tabletLandscape: return 1024
+        case .gameLandscape: return 1152
+        case .phonePortrait: return 380
+        case .tabletLandscape: return 960
         }
     }
 
     public var defaultWindowHeight: Int {
         switch self {
-        case .adaptiveApp: return 720
-        case .gameLandscape: return 720
-        case .phonePortrait: return 860
-        case .tabletLandscape: return 640
+        case .adaptiveApp: return 780
+        case .gameLandscape: return 648
+        case .phonePortrait: return 824
+        case .tabletLandscape: return 600
         }
     }
 
@@ -128,6 +137,7 @@ public struct EngineConfig: Codable, Equatable, Sendable {
     public var enableGamepad: Bool
     public var enableQuickBoot: Bool
     public var enableHardwareDecode: Bool
+    public var enableFlexDisplay: Bool
     public var hideSystemDecorationsInAppMode: Bool
     public var port: Int
 
@@ -143,6 +153,7 @@ public struct EngineConfig: Codable, Equatable, Sendable {
         enableGamepad: Bool = true,
         enableQuickBoot: Bool = true,
         enableHardwareDecode: Bool = true,
+        enableFlexDisplay: Bool = false,
         hideSystemDecorationsInAppMode: Bool = false,
         port: Int = 5554
     ) {
@@ -157,8 +168,28 @@ public struct EngineConfig: Codable, Equatable, Sendable {
         self.enableGamepad = enableGamepad
         self.enableQuickBoot = enableQuickBoot
         self.enableHardwareDecode = enableHardwareDecode
+        self.enableFlexDisplay = enableFlexDisplay
         self.hideSystemDecorationsInAppMode = hideSystemDecorationsInAppMode
         self.port = port
+    }
+
+    public init(from decoder: Decoder) throws {
+        let defaults = EngineConfig()
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        self.avdName = try c.decodeIfPresent(String.self, forKey: .avdName) ?? defaults.avdName
+        self.systemImage = try c.decodeIfPresent(SystemImageVariant.self, forKey: .systemImage) ?? defaults.systemImage
+        self.cpuCores = try c.decodeIfPresent(Int.self, forKey: .cpuCores) ?? defaults.cpuCores
+        self.ramMB = try c.decodeIfPresent(Int.self, forKey: .ramMB) ?? defaults.ramMB
+        self.diskSizeMB = try c.decodeIfPresent(Int.self, forKey: .diskSizeMB) ?? defaults.diskSizeMB
+        self.gpuMode = try c.decodeIfPresent(GPUMode.self, forKey: .gpuMode) ?? defaults.gpuMode
+        self.maxFPS = try c.decodeIfPresent(Int.self, forKey: .maxFPS) ?? defaults.maxFPS
+        self.enableAudio = try c.decodeIfPresent(Bool.self, forKey: .enableAudio) ?? defaults.enableAudio
+        self.enableGamepad = try c.decodeIfPresent(Bool.self, forKey: .enableGamepad) ?? defaults.enableGamepad
+        self.enableQuickBoot = try c.decodeIfPresent(Bool.self, forKey: .enableQuickBoot) ?? defaults.enableQuickBoot
+        self.enableHardwareDecode = try c.decodeIfPresent(Bool.self, forKey: .enableHardwareDecode) ?? defaults.enableHardwareDecode
+        self.enableFlexDisplay = try c.decodeIfPresent(Bool.self, forKey: .enableFlexDisplay) ?? defaults.enableFlexDisplay
+        self.hideSystemDecorationsInAppMode = try c.decodeIfPresent(Bool.self, forKey: .hideSystemDecorationsInAppMode) ?? defaults.hideSystemDecorationsInAppMode
+        self.port = try c.decodeIfPresent(Int.self, forKey: .port) ?? defaults.port
     }
 
     public var emulatorSerial: String {

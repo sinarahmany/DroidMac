@@ -18,17 +18,21 @@ public actor WindowLauncher {
         profile: LaunchProfile,
         config: EngineConfig
     ) -> [String] {
+        let useFlex = config.enableFlexDisplay && profile.supportsFlexDisplay
+        let displaySpec = useFlex ? profile.flexVirtualDisplaySpec : profile.virtualDisplaySpec
+
         var args: [String] = [
             "-s", serial,
-            "--new-display=\(profile.virtualDisplaySpec)",
+            "--new-display=\(displaySpec)",
             "--start-app=+\(packageName)",
             "--window-title=\(windowTitle)",
             "--max-fps=\(max(15, min(120, config.maxFPS)))",
             "--video-bit-rate=\(profile.defaultBitrateMbps)M",
-            "--render-driver=metal"
+            "--render-driver=metal",
+            "--render-fit=letterbox"
         ]
 
-        if profile.supportsFlexDisplay {
+        if useFlex {
             // scrcpy 5.x forbids --window-width/--window-height when --flex-display is set
             args.append("--flex-display")
         } else {
@@ -67,9 +71,11 @@ public actor WindowLauncher {
         var args: [String] = [
             "-s", serial,
             "--window-title=\(windowTitle)",
+            "--window-height=824",
             "--max-fps=\(max(15, min(120, config.maxFPS)))",
             "--video-bit-rate=12M",
-            "--render-driver=metal"
+            "--render-driver=metal",
+            "--render-fit=letterbox"
         ]
         if config.enableHardwareDecode {
             args.append("--hwdec=videotoolbox")

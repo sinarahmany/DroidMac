@@ -1,0 +1,15 @@
+# Xcode / Swift Package Manager
+.build/
+build/
+DerivedData/
+*.xcuserstate
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# Release distribution binaries
+dist/
+
+# macOS system files
+.DS_Store
+.Trashes
+Thumbs.db

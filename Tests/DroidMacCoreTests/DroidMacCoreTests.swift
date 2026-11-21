@@ -110,28 +110,62 @@ struct DroidMacCoreTests {
             profile: .adaptiveApp,
             config: config
         )
-        #expect(appArgs.contains("--new-display=900x1200/280"))
-        #expect(appArgs.contains("--flex-display"))
-        #expect(!appArgs.contains(where: { $0.hasPrefix("--window-width=") }))
-        #expect(!appArgs.contains(where: { $0.hasPrefix("--window-height=") }))
+        #expect(appArgs.contains("--new-display=1080x1560/320"))
+        #expect(appArgs.contains("--render-fit=letterbox"))
+        #expect(appArgs.contains("--window-width=540"))
+        #expect(appArgs.contains("--window-height=780"))
+        #expect(!appArgs.contains("--flex-display"))
         #expect(appArgs.contains("--start-app=+com.android.settings"))
         #expect(appArgs.contains("--render-driver=metal"))
         #expect(appArgs.contains("--hwdec=videotoolbox"))
         #expect(!appArgs.contains("--gamepad=uhid"))
+
+        var flexConfig = config
+        flexConfig.enableFlexDisplay = true
+        let flexArgs = WindowLauncher.buildAppWindowArguments(
+            serial: "emulator-5554",
+            packageName: "com.android.settings",
+            windowTitle: "Settings",
+            profile: .adaptiveApp,
+            config: flexConfig
+        )
+        #expect(flexArgs.contains("--new-display=540x780/160"))
+        #expect(flexArgs.contains("--flex-display"))
+        #expect(flexArgs.contains("--render-fit=letterbox"))
+        #expect(!flexArgs.contains(where: { $0.hasPrefix("--window-width=") }))
+        #expect(!flexArgs.contains(where: { $0.hasPrefix("--window-height=") }))
 
         let gameArgs = WindowLauncher.buildAppWindowArguments(
             serial: "emulator-5554",
             packageName: "com.example.racer",
             windowTitle: "Racer 3D",
             profile: .gameLandscape,
-            config: config
+            config: flexConfig
         )
         #expect(gameArgs.contains("--new-display=1920x1080/320"))
         #expect(!gameArgs.contains("--flex-display"))
-        #expect(gameArgs.contains("--window-width=1280"))
-        #expect(gameArgs.contains("--window-height=720"))
+        #expect(gameArgs.contains("--render-fit=letterbox"))
+        #expect(gameArgs.contains("--window-width=1152"))
+        #expect(gameArgs.contains("--window-height=648"))
         #expect(gameArgs.contains("--video-bit-rate=16M"))
         #expect(gameArgs.contains("--gamepad=uhid"))
+    }
+
+    @Test("EngineConfig decodes legacy config JSON without enableFlexDisplay")
+    func testEngineConfigBackwardCompatibleDecoding() throws {
+        let legacyJSON = """
+        {
+          "avdName": "DroidMac_ARM64",
+          "cpuCores": 6,
+          "ramMB": 6144
+        }
+        """
+        let decoded = try JSONDecoder().decode(EngineConfig.self, from: Data(legacyJSON.utf8))
+        #expect(decoded.avdName == "DroidMac_ARM64")
+        #expect(decoded.cpuCores == 6)
+        #expect(decoded.ramMB == 6144)
+        #expect(decoded.enableFlexDisplay == false)
+        #expect(decoded.gpuMode == .host)
     }
 
     @Test("scrcpy --list-apps output parser separates user apps and curated system apps")

@@ -49,6 +49,10 @@ struct SettingsView: View {
 
                 Toggle("Forward Android Audio to macOS CoreAudio", isOn: $state.config.enableAudio)
                 Toggle("Apple VideoToolbox Hardware Decode", isOn: $state.config.enableHardwareDecode)
+                Toggle("Dynamic Reflow Resize (Flex Display)", isOn: $state.config.enableFlexDisplay)
+                Text("Off (default) uses crisp 2× Retina scaling with zero crop; On dynamically reflows Android app layouts as you drag-resize the window.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
                 Toggle("Forward Game Controllers (PS / Xbox via UHID)", isOn: $state.config.enableGamepad)
                 Toggle("Hide Android Navigation Bar in Native Window Mode", isOn: $state.config.hideSystemDecorationsInAppMode)
             }
